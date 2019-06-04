@@ -3683,6 +3683,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2881656375872794607, guid: 68b3a1213e3b7154c8dfa0a08c2d30d5,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2881656375872794604, guid: 68b3a1213e3b7154c8dfa0a08c2d30d5,
+        type: 3}
+      propertyPath: mainEngine
+      value: 
+      objectReference: {fileID: 8300000, guid: 3a4edd57e9113524cb916826044a2b12, type: 3}
+    - target: {fileID: 2881656375872794604, guid: 68b3a1213e3b7154c8dfa0a08c2d30d5,
+        type: 3}
+      propertyPath: stopEngine
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2881656375872794604, guid: 68b3a1213e3b7154c8dfa0a08c2d30d5,
+        type: 3}
+      propertyPath: levelComplete
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2881656375872794604, guid: 68b3a1213e3b7154c8dfa0a08c2d30d5,
+        type: 3}
+      propertyPath: success
+      value: 
+      objectReference: {fileID: 8300000, guid: e8c839a650dae63419279631ad70ec25, type: 3}
+    - target: {fileID: 2881656375872794604, guid: 68b3a1213e3b7154c8dfa0a08c2d30d5,
+        type: 3}
+      propertyPath: death
+      value: 
+      objectReference: {fileID: 8300000, guid: ee88cafda67b441409e460c34ffeabbc, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68b3a1213e3b7154c8dfa0a08c2d30d5, type: 3}
 --- !u!1001 &4219587965748181514
