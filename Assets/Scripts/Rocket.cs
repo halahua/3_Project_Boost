@@ -1,13 +1,16 @@
 ﻿using UnityEngine.SceneManagement;
 using UnityEngine;
 
-public class Rocket : MonoBehaviour    
+public class Rocket : MonoBehaviour
 {
-    // todo fix lightning bug
     [SerializeField] float rcsThrust = 100f;
     [SerializeField] float mainThrust = 100f;
+
     Rigidbody rigidBody;
     AudioSource audioSource;
+
+    enum State  { Alive, Dying, Transcending }
+    State state = State.Alive;
 
     void Start()
     {
@@ -17,30 +20,48 @@ public class Rocket : MonoBehaviour
 
     void Update()
     {
-        Thrust();
-        Rotate();
+        if (state == State.Alive)
+        {
+            Thrust();
+            Rotate();
+        }
     }
 
     void OnCollisionEnter(Collision collision)
     {
+        if (state != State.Alive) { return; } // ignore collisions when dead
+
         switch (collision.gameObject.tag)
         {
             case "Friendly":
                 print("Ok");
                 break;
             case "Finish":
-                print("Hit finish");
-                SceneManager.LoadScene(1);
+                state = State.Transcending;
+                Invoke("LoadNewScene", 2f);
                 break;
             default:
-                print("Dead");
-                SceneManager.LoadScene(0);
+                state = State.Dying;
+                Invoke("ReloadLevel", 4f);
                 break;
         }
     }
 
+    void ReloadLevel()
+    {
+        print("Dead");
+        SceneManager.LoadScene(0);
+    }
+
+    void LoadNewScene()
+    {
+        print("Hit finish");
+        SceneManager.LoadScene(1);
+    }
+
     private void Thrust()
     {
+
         if (Input.GetKey(KeyCode.Space))
         {
             rigidBody.AddRelativeForce(Vector3.up * mainThrust);
