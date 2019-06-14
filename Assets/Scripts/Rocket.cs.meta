@@ -4,9 +4,12 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - mainEngine: {instanceID: 0}
-  - success: {instanceID: 0}
-  - death: {instanceID: 0}
+  - mainEngine: {fileID: 8300000, guid: 3a4edd57e9113524cb916826044a2b12, type: 3}
+  - success: {fileID: 8300000, guid: e8c839a650dae63419279631ad70ec25, type: 3}
+  - death: {fileID: 8300000, guid: ee88cafda67b441409e460c34ffeabbc, type: 3}
+  - mainEngineParticles: {instanceID: 0}
+  - successParticles: {instanceID: 0}
+  - deathParticles: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
